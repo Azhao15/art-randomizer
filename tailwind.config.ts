@@ -19,6 +19,16 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        // Gallery-specific colors
+        "gallery-white": "hsl(var(--gallery-white))",
+        "gallery-off-white": "hsl(var(--gallery-off-white))",
+        "gallery-navy": "hsl(var(--gallery-navy))",
+        "gallery-charcoal": "hsl(var(--gallery-charcoal))",
+        "gallery-warm-gray": "hsl(var(--gallery-warm-gray))",
+        "gallery-gold": "hsl(var(--gallery-gold))",
+        "gallery-sage": "hsl(var(--gallery-sage))",
+        "gallery-burgundy": "hsl(var(--gallery-burgundy))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -57,6 +67,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        'serif': ['Playfair Display', 'serif'],
+        'sans': ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
