@@ -3,15 +3,17 @@
 ## Project info
 
 **Contributions**: 
-Name: Andrew Zhao
-Github User: Azhao15
-Harvard Email: andrew_zhao@college.harvard.edu
+Name: Andrew Zhao  
+Github User: Azhao15  
+Harvard Email: andrew_zhao@college.harvard.edu  
 
-**Lovable URL**: https://lovable.dev/projects/970aedd1-1672-4463-a473-ad0da23669d9
-**Published Lovable URL**: https://art-randomizer.lovable.app/
-**GitHub Repository URL**: https://github.com/Azhao15/cs1060-Azhao15-hw1
-**Netlify Deployment URL**: 
+**Lovable URL**: https://lovable.dev/projects/970aedd1-1672-4463-a473-ad0da23669d9  
+**Published Lovable URL**: https://art-randomizer.lovable.app/  
+**GitHub Repository URL**: https://github.com/Azhao15/cs1060-Azhao15-hw1  
+**Netlify Deployment URL**: https://celebrated-sundae-4c705d.netlify.app/  
 
+**Notes**: I created a random art piece generator for the Art Institute of Chicago (leveraging their api). Within this webapp, there is a generate artwork button that will go through and display a new piece of art each time it is clicked from the AIC and displays some of the general information about the piece. It also has a feature to select favorite pieces of art and keep them saved.  
+The implementation of the project using lovable was actually quite smooth, the main issue I'd say I ran into was credit limits. I think I prompted lovable well enough to have it carry out a feature implementation in a more concise way which lead to less hallucination/errors. I do think that the main trouble I ran into were credit limits, which I had actually first intended to carry out the game implementation option for this assignment on Bolt, but wasn't getting the results that I wanted. Overall, I spent about 1.5 hours total on this assignment.
 
 ## Lovable Auto README below
 
