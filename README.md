@@ -1,8 +1,19 @@
-# Welcome to your Lovable project
+# CS1060-hw1
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/970aedd1-1672-4463-a473-ad0da23669d9
+**Contributions**: 
+Name: Andrew Zhao
+Github User: Azhao15
+Harvard Email: andrew_zhao@college.harvard.edu
+
+**Lovable URL**: https://lovable.dev/projects/970aedd1-1672-4463-a473-ad0da23669d9
+**Published Lovable URL**: https://art-randomizer.lovable.app/
+**GitHub Repository URL**: https://github.com/Azhao15/cs1060-Azhao15-hw1
+**Netlify Deployment URL**: 
+
+
+## Lovable Auto README below
 
 ## How can I edit this code?
 
