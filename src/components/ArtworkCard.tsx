@@ -1,5 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Heart } from "lucide-react";
+import { useFavorites } from "@/hooks/useFavorites";
 
 interface ArtworkData {
   id: number;
@@ -19,6 +22,7 @@ interface ArtworkCardProps {
 }
 
 export const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
+  const { isFavorite, toggleFavorite } = useFavorites();
   const imageUrl = artwork.image_id 
     ? `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
     : '/placeholder.svg';
@@ -37,6 +41,22 @@ export const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
                 e.currentTarget.src = '/placeholder.svg';
               }}
             />
+            
+            {/* Favorite Button */}
+            <Button
+              onClick={() => toggleFavorite(artwork)}
+              size="icon"
+              variant="outline"
+              className={`absolute top-4 right-4 ${
+                isFavorite(artwork.id) 
+                  ? 'bg-gallery-sage text-gallery-white hover:bg-gallery-sage/80' 
+                  : 'bg-gallery-white/90 text-gallery-warm-gray hover:bg-gallery-white hover:text-gallery-sage'
+              }`}
+            >
+              <Heart 
+                className={`h-4 w-4 ${isFavorite(artwork.id) ? 'fill-current' : ''}`} 
+              />
+            </Button>
           </div>
           
           {/* Artwork Details */}

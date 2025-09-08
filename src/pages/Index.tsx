@@ -2,10 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ArtworkCard } from "@/components/ArtworkCard";
 import { LoadingSpinner } from "@/components/LoadingSpinner";
 import { useArtwork } from "@/hooks/useArtwork";
-import { Shuffle } from "lucide-react";
+import { useFavorites } from "@/hooks/useFavorites";
+import { Shuffle, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const { currentArtwork, loading, error, getRandomArtwork } = useArtwork();
+  const { favorites } = useFavorites();
 
   if (loading) {
     return (
@@ -54,14 +57,27 @@ const Index = () => {
             Each click reveals a new treasure from over 300,000 works of art.
           </p>
           
-          <Button 
-            onClick={getRandomArtwork}
-            size="lg"
-            className="bg-gallery-navy hover:bg-gallery-charcoal text-gallery-white px-8 py-3 text-lg font-medium transition-all duration-300 hover:scale-105"
-          >
-            <Shuffle className="mr-2 h-5 w-5" />
-            Discover New Artwork
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              onClick={getRandomArtwork}
+              size="lg"
+              className="bg-gallery-navy hover:bg-gallery-charcoal text-gallery-white px-8 py-3 text-lg font-medium transition-all duration-300 hover:scale-105"
+            >
+              <Shuffle className="mr-2 h-5 w-5" />
+              Discover New Artwork
+            </Button>
+            
+            <Link to="/favorites">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="px-8 py-3 text-lg font-medium border-gallery-sage text-gallery-sage hover:bg-gallery-sage hover:text-gallery-white transition-all duration-300"
+              >
+                <Heart className="mr-2 h-5 w-5" />
+                My Favorites ({favorites.length})
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {/* Artwork Display */}
